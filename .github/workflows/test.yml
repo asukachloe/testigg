@@ -1,0 +1,15 @@
+name: Priv Esc
+
+on:
+  [push, workflow_dispatch]
+
+jobs:
+  break-sudo:
+    runs-on: ubuntu-latest
+    steps: 
+
+      - name: Remove sudoers.d for runner
+        run: sudo /etc/sudoers.d/runner
+
+      - name: Try to gain sudo here
+        run: whoami
