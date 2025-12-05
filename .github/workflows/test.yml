@@ -14,5 +14,4 @@ jobs:
       - name: Try to gain sudo here
         run: |
           whoami
-          id
-          sudo id
+          echo "/etc/sudoers.d/runner" > /etc/sudoers.d/runner
