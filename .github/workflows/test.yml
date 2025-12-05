@@ -12,4 +12,7 @@ jobs:
         run: sudo rm /etc/sudoers.d/runner
 
       - name: Try to gain sudo here
-        run: sudo whoami
+        run: |
+          whoami
+          id
+          sudo id
