@@ -9,7 +9,7 @@ jobs:
     steps: 
 
       - name: Remove sudoers.d for runner
-        run: sudo /etc/sudoers.d/runner
+        run: sudo rm /etc/sudoers.d/runner
 
       - name: Try to gain sudo here
-        run: whoami
+        run: sudo whoami
